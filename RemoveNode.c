@@ -101,7 +101,7 @@ void  display()
     	current = current->next;
     }
 
-    	printf("\n");
+    printf("\n");
 }
 
 
