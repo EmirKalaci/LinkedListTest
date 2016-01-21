@@ -47,9 +47,8 @@ int main()
 
 /*
  *AddNodes function is to add a node to Linked List.
- *AddNodes function takes 'newValue' as input.
- *AddNodes function doesn't return a value as output.
- *AddNodes function changes the value of 'head'.
+ *It takes 'newValue' as input and doesn't return a value as output.
+ *At the same time it changes the value of 'head'.
  */
 void AddNodes(int newValue)
 {
@@ -77,9 +76,8 @@ void AddNodes(int newValue)
 
 /*
  *display function is to show values in the Linked List.
- *display function doesn't take an input.
- *display function doesn't return an output.
- *display function doesn't change any global variable.
+ *It doesn't take an input and doesn't return an output.
+ *At the same time it doesn't change any global variable.
  */
 void  display()
 {
@@ -103,9 +101,8 @@ void  display()
 
 /*
  *removeNode function is to remove a value from Linked List.
- *removeNode function takes 'remove' variable as an input.
- *'remove' variable will be removed from Linked List'
- *if 'remove' variable is 'head' , value of 'head' changes as a global variable.
+ *A variable is taken as an input and will be removed.
+ *If remove variable is head , value of head changes as a global variable.
  */
 void removeNode(int remove)
 {
