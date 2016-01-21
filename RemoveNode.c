@@ -58,13 +58,17 @@ void AddNodes(int newValue)
 	newNode = (struct Node *)malloc(sizeof(struct Node));
 	newNode -> value = newValue;
 
-	/*if there is not any value in the Linked List , 'newValue' assigns as head of Linked List'*/
+	/*There is not any value in the Linked List.
+	 *newNode assigns as head of Linked List.
+	 */
 	if(head == NULL)
 	{
 		head = newNode;
 		head -> next = NULL;
 	}
-	/*if there is any value in the Linked List , 'newValue' assigns as head of Linked List'*/
+	/*There is any value in the Linked List.
+	 *newNode assigns as head of Linked List.
+	 */
 	else
 	{
 		newNode -> next = head;
