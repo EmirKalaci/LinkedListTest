@@ -115,7 +115,7 @@ void removeNode(int remove)
 	struct Node *current=head;
 	int bool = false;
 
-	/* if the linked list is empty , to search 'remove' value in the linked list */
+	/* if the linked list is empty , to search remove value in the linked list */
 	while(current != NULL)
 	{
 		/*
