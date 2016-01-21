@@ -46,28 +46,30 @@ int main()
 
 
 /*
- *AddNodes function is to add a node to Linked List.
- *It takes 'newValue' as input and doesn't return a value as output.
- *At the same time it changes the value of 'head'.
+ *This function is to add a node to linked list.
+ *It takes newValue as input and doesn't return a value as output.
+ *At the same time it changes the value of head.
  */
 void AddNodes(int newValue)
 {
 	struct Node *newNode;
 
-	/*to allocate memory for new node*/
+	/* to allocate memory for new node */
 	newNode = (struct Node *)malloc(sizeof(struct Node));
 	newNode -> value = newValue;
 
-	/*There is not any value in the Linked List.
-	 *newNode assigns as head of Linked List.
+	/*
+	 *If there is not any value in the linked list
+	 *newNode assigns as head of linked list.
 	 */
 	if(head == NULL)
 	{
 		head = newNode;
 		head -> next = NULL;
 	}
-	/*There is any value in the Linked List.
-	 *newNode assigns as head of Linked List.
+	/*
+	 *If there is any value in the linked list
+	 *newNode assigns as head of linked list.
 	 */
 	else
 	{
@@ -79,7 +81,7 @@ void AddNodes(int newValue)
 
 
 /*
- *display function is to show values in the Linked List.
+ *This function is to show values in the Linked List.
  *It doesn't take an input and doesn't return an output.
  *At the same time it doesn't change any global variable.
  */
@@ -89,10 +91,10 @@ void  display()
 
     if(current == NULL)
     {
-    	printf("Linked List is empty.");
+    	printf("Linked list is empty.");
     }
 
-    /*all of values show in the Linked List*/
+    /* all of values show in the linked list */
     while(current != NULL)
     {
     	printf("%d ",current -> value);
@@ -104,7 +106,7 @@ void  display()
 
 
 /*
- *removeNode function is to remove a value from Linked List.
+ *This function is to remove a value from linked list.
  *A variable is taken as an input and will be removed.
  *If remove variable is head , value of head changes as a global variable.
  */
@@ -114,21 +116,21 @@ void removeNode(int remove)
 	struct Node *current=head;
 	int bool = false;
 
-	/*if the linked list is empty , to search 'remove' value in the Linked List */
+	/* if the linked list is empty , to search 'remove' value in the linked list */
 	while(current != NULL)
 	{
-		/*'remove' value is found in the linked list*/
+		/* remove value is found in the linked list */
 		if(current -> value == remove)
 		{
 			bool=true;
-			/*if previous is null , value to be removed on head of Linked List*/
+			/* if previous is null , value to be removed on head of linked list */
 			if(previous == NULL)
 			{
 				current = current -> next;
 				free(head);
 				head = current;
 			}
-			/*value to be removed is out of head*/
+			/* value to be removed is out of head */
 			else
 			{
 				previous -> next = current -> next;
@@ -137,7 +139,7 @@ void removeNode(int remove)
 			}
 
 		}
-		/*go to the next value in the linked list*/
+		/* go to the next value in the linked list */
 		else
 		{
 			previous=current;
@@ -146,10 +148,10 @@ void removeNode(int remove)
 
 	}
 
-	/*'remove' value doesn't find in the Linked List */
+	/* remove value doesn't find in the linked list */
 	if(bool == false)
 	{
-		printf("'%d' didn't find in the Linked List. \n",remove);
+		printf("'%d' didn't find in the linked list. \n",remove);
 	}
 
 }
