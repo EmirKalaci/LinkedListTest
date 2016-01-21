@@ -97,7 +97,7 @@ void  display()
     while(current != NULL)
     {
     	printf("%d ",current -> value);
-    	current = current->next;
+    	current = current -> next;
     }
 
     printf("\n");
@@ -111,8 +111,8 @@ void  display()
  */
 void removeNode(int remove)
 {
-	struct Node *previous=NULL;
-	struct Node *current=head;
+	struct Node *previous = NULL;
+	struct Node *current = head;
 	int bool = false;
 
 	/* if the linked list is empty , to search remove value in the linked list */
@@ -124,7 +124,7 @@ void removeNode(int remove)
 		 */
 		if(current -> value == remove)
 		{
-			bool=true;
+			bool = true;
 
 			/*
 			 *If previous is null , value to be removed on head of
@@ -146,8 +146,8 @@ void removeNode(int remove)
 		}
 		else
 		{
-			previous=current;
-			current=current->next;
+			previous = current;
+			current = current -> next;
 		}
 
 	}
