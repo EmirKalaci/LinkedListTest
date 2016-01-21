@@ -123,6 +123,7 @@ void removeNode(int remove)
 		if(current -> value == remove)
 		{
 			bool=true;
+
 			/* if previous is null , value to be removed on head of linked list */
 			if(previous == NULL)
 			{
