@@ -60,6 +60,9 @@ void AddNodes(int newValue)
 
 	/*
 	 *If there is not any value in the linked list
+	 *newNode assigns as head of linked list
+	 *and null assigns to next of head.
+	 *else there is any value in the linked list
 	 *newNode assigns as head of linked list.
 	 */
 	if(head == NULL)
@@ -67,10 +70,6 @@ void AddNodes(int newValue)
 		head = newNode;
 		head -> next = NULL;
 	}
-	/*
-	 *If there is any value in the linked list
-	 *newNode assigns as head of linked list.
-	 */
 	else
 	{
 		newNode -> next = head;
@@ -119,19 +118,24 @@ void removeNode(int remove)
 	/* if the linked list is empty , to search 'remove' value in the linked list */
 	while(current != NULL)
 	{
-		/* remove value is found in the linked list */
+		/*
+		 *If remove value is found in the linked list
+		 *else go to the next value in the linked list.
+		 */
 		if(current -> value == remove)
 		{
 			bool=true;
 
-			/* if previous is null , value to be removed on head of linked list */
+			/*
+			 *If previous is null , value to be removed on head of
+			 *linked list. Else value to be removed is out of head.
+			 */
 			if(previous == NULL)
 			{
 				current = current -> next;
 				free(head);
 				head = current;
 			}
-			/* value to be removed is out of head */
 			else
 			{
 				previous -> next = current -> next;
@@ -140,7 +144,6 @@ void removeNode(int remove)
 			}
 
 		}
-		/* go to the next value in the linked list */
 		else
 		{
 			previous=current;
