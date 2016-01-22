@@ -157,5 +157,4 @@ void removeNode(int remove)
 	{
 		printf("'%d' didn't find in the linked list. \n",remove);
 	}
-
 }
