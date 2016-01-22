@@ -56,7 +56,7 @@ void AddNodes(int newValue)
 
 	/* to allocate memory for new node */
 	newNode = (struct Node *)malloc(sizeof(struct Node));
-	newNode -> value = newValue;
+	newNode->value = newValue;
 
 	/*
 	 * If there is not any value in the linked list
@@ -68,11 +68,11 @@ void AddNodes(int newValue)
 	if(head == NULL)
 	{
 		head = newNode;
-		head -> next = NULL;
+		head->next = NULL;
 	}
 	else
 	{
-		newNode -> next = head;
+		newNode->next = head;
 		head = newNode;
 	}
 
@@ -96,8 +96,8 @@ void  display()
     /* all of values show in the linked list */
     while(current != NULL)
     {
-    	printf("%d ",current -> value);
-    	current = current -> next;
+    	printf("%d ",current->value);
+    	current = current->next;
     }
 
     printf("\n");
@@ -122,7 +122,7 @@ void removeNode(int remove)
 		 * If remove value is found in the linked list
 		 * else go to the next value in the linked list.
 		 */
-		if(current -> value == remove)
+		if(current->value == remove)
 		{
 			bool = true;
 
@@ -132,22 +132,22 @@ void removeNode(int remove)
 			 */
 			if(previous == NULL)
 			{
-				current = current -> next;
+				current = current->next;
 				free(head);
 				head = current;
 			}
 			else
 			{
-				previous -> next = current -> next;
+				previous->next = current->next;
 				free(current);
-				current = previous -> next;
+				current = previous->next;
 			}
 
 		}
 		else
 		{
 			previous = current;
-			current = current -> next;
+			current = current->next;
 		}
 
 	}
