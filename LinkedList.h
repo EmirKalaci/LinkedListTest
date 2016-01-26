@@ -15,6 +15,6 @@ typedef int bool;
 #define true 1
 #define false 0
 
-void AddNodes(int newValue);
-void display();
-void removeNode(int remove);
+void AddNode(int newNodeValue);
+void displayNodes();
+void removeNode(int removeNodeValue);

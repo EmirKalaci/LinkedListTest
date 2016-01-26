@@ -4,23 +4,22 @@ int main()
 {
 	struct Node *head = NULL;
 
-    AddNodes(2);
-	AddNodes(5);
-	AddNodes(8);
-	AddNodes(9);
+	AddNode(5);
+	AddNode(8);
+	AddNode(9);
 
-	display();
+	displayNodes();
 
 	removeNode(9);
 	removeNode(5);
 	removeNode(2);
 	removeNode(20);
 
-	display();
+	displayNodes();
 
 	removeNode(8);
 
-	display();
+	displayNodes();
 
 	return 0;
 }
