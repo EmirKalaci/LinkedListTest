@@ -44,19 +44,19 @@ void  displayNodes()
 	struct Node *currentNode = head;
 
 	/* if there is not any node in the linked list */
-    if(currentNode == NULL)
-    {
-    	printf("Linked list is empty.");
-    }
+	if(currentNode == NULL)
+	{
+		printf("Linked list is empty.");
+	}
 
-    /* if linked list has any node , all value of nodes print on screen */
-    while(currentNode != NULL)
-    {
-    	printf("%d ",currentNode->value);
-    	currentNode = currentNode->next;
-    }
+	/* if linked list has any node , all value of nodes print on screen */
+	while(currentNode != NULL)
+	{
+		printf("%d ",currentNode->value);
+		currentNode = currentNode->next;
+	}
 
-    printf("\n");
+	printf("\n");
 }
 
 
@@ -108,7 +108,7 @@ void removeNode(int removeNodeValue)
 
 	}
 
-	/* remove value doesn't find in the linked list */
+	/* remove value does not find in the linked list */
 	if(isMatchRemoveNodeValue == false)
 	{
 		printf("'%d' didn't find in the linked list. \n",removeNodeValue);
