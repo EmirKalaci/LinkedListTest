@@ -9,7 +9,7 @@ void AddNode(int newNodeValue)
 {
 	struct Node *newNode;
 
-	/* to allocate memory for new node */
+	/* allocate memory for new node */
 	newNode = (struct Node *)malloc(sizeof(struct Node));
 	newNode->value = newNodeValue;
 
